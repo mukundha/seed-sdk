@@ -13,7 +13,8 @@ sdk.storeTestData = function(data){
 	request({
 		uri: baseurl+ '/testdatasets',
 		body: data,
-		json: true
+		json: true,
+		method:'POST'
 	}, function(error, response ,body){
 		if(error) q.reject(error)
 		else q.resolve(body)
